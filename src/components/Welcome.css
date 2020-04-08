@@ -5,13 +5,13 @@
 }
 .container-fluid {
   background-color: grey;
-  height: 50vh;
+  height: 42vh;
 }
 
 /* UserInput style */
 
 .form-group {
-  width: 10%;
+  width: 25rem;
 }
 
 .Test {

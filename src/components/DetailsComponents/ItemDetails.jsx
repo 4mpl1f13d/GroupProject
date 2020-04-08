@@ -1,19 +1,21 @@
 import React, { Component } from "react";
-import "../Welcome.css";
+import "../Details.css";
 
-class Test extends Component {
+class ItemDetails extends Component {
   constructor() {
     super();
     this.state = {
-      name: "",
-      email: "",
+      make: "",
+      keyword: "",
+      model: "",
     };
   }
 
   changeHandler = (event) => {
     this.setState({
-      name: event.target.value,
-      email: event.target.value,
+      make: event.target.value,
+      keyword: event.target.value,
+      model: event.target.value,
     });
   };
 
@@ -21,47 +23,43 @@ class Test extends Component {
     return (
       <React.Fragment>
         <form className="form-top">
-          <h4 color="skyblue">User info</h4>
           <div class="form-group">
-            <label for="exampleInputEmail1">Name</label>
+            <label for="exampleInputmake1">Make</label>
             <input
               placeholder="Type here..."
-              name="name"
-              value={this.state.email}
+              name="make"
+              value={this.state.make}
               onChange={this.changeHandler}
               type="name"
               class="form-control"
-              id="nameInput"
+              id="makeInput"
             ></input>
-            {/*<small id="emailHelp" class="form-text text-muted">
-            We'll never share your email with anyone else.
+            {/*<small id="makeHelp" class="form-text text-muted">
+            We'll never share your make with anyone else.
     </small>*/}
           </div>
           <div class="form-group">
-            <label for="exampleInputPassword1">Address</label>
+            <label for="exampleInputPassword1">Model</label>
             <input
               placeholder="Type here..."
-              type="address"
+              type="model"
               class="form-control"
-              id="addressInput"
+              id="modelInput"
             ></input>
           </div>
+          <h6>OR</h6>
           <div class="form-group">
-            <label for="exampleInputPassword1">Phone</label>
+            <label for="exampleInputPassword1">Keyword</label>
             <input
               placeholder="Type here..."
-              type="phone"
+              type="Keyword"
               class="form-control"
-              id="phoneInput"
+              id="KeywordInput"
             ></input>
           </div>
 
           <button type="submit" class="btn btn-primary">
-            To GoodWill
-          </button>
-          <h3>OR</h3>
-          <button type="submit" class="btn btn-primary">
-            Private Party
+            Add To List
           </button>
         </form>
       </React.Fragment>
@@ -69,4 +67,4 @@ class Test extends Component {
   }
 }
 
-export default Test;
+export default ItemDetails;
